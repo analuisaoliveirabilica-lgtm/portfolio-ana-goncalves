@@ -1,0 +1,38 @@
+.footer .footer-socials {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+}
+
+.footer-social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    transition: background-color 180ms ease;
+}
+
+.footer-social-link:hover,
+.footer-social-link:focus-visible {
+    background: var(--sage);
+}
+
+.footer-social-link:focus-visible {
+    outline: 2px solid var(--dark);
+    outline-offset: 3px;
+}
+
+.footer-social-link svg {
+    width: 19px;
+    height: 19px;
+}
+
+@media (max-width: 700px) {
+    .footer .footer-socials {
+        order: 2;
+        width: 100%;
+    }
+}

@@ -1,0 +1,53 @@
+.project-carousel { min-width: 0; }
+.carousel-controls { display: none; }
+
+@media (max-width: 700px) {
+    .project-carousel .carousel-viewport {
+        display: grid;
+        grid-template-columns: none;
+        grid-auto-flow: column;
+        grid-auto-columns: 82%;
+        gap: 14px;
+        width: 100%;
+        overflow-x: auto;
+        overscroll-behavior-x: contain;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        scrollbar-width: thin;
+        scrollbar-color: var(--medium) var(--sage);
+        padding-bottom: 14px;
+    }
+    .carousel-viewport:focus-visible { outline: 2px solid var(--dark); outline-offset: 5px; }
+    .carousel-viewport > .project-card {
+        scroll-snap-align: start;
+        min-width: 0;
+        display: flex;
+        flex-direction: column;
+    }
+    .carousel-viewport .project-preview { height: clamp(260px, 74vw, 320px); flex: none; }
+    .carousel-viewport .project-info { display: flex; flex-direction: column; flex: 1; }
+    .carousel-viewport .project-status { margin-top: auto; }
+    .carousel-viewport .project-info > p:not(.eyebrow) { margin-bottom: 22px; }
+    .carousel-viewport .project-info h3 { font-size: clamp(23px, 6.5vw, 30px); }
+    .carousel-viewport .urban-content h4 { font-size: clamp(21px, 6vw, 30px); }
+    .carousel-controls { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px; margin-top: 12px; }
+    .carousel-hint { font-size: 12px; }
+    .carousel-navigation { display: flex; align-items: center; gap: 8px; }
+    .carousel-navigation button {
+        display: grid;
+        place-items: center;
+        width: 44px;
+        height: 44px;
+        border: 1px solid var(--medium);
+        border-radius: 50%;
+        background: transparent;
+        font-size: 22px;
+    }
+    .carousel-navigation button:hover:not(:disabled) { background: var(--pastel); }
+    .carousel-navigation button:disabled { opacity: .4; cursor: default; }
+    .carousel-position { font-size: 12px; min-width: 40px; text-align: center; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .project-carousel .carousel-viewport { scroll-behavior: auto; }
+}
