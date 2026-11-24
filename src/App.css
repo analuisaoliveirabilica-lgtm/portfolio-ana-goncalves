@@ -1231,6 +1231,9 @@ h2 {
   .hero-copy > .eyebrow { font-size: 10px; }
   .hero-actions .text-link, .footer .back-top { min-height: 44px; }
   .hero .design-note { max-width: calc(100% - 32px); }
+  /* Mobile hero: only the cat, resting at the bottom corner of the text */
+  .hero .hero-art { min-height: 120px; width: 100%; margin: 0 0 16px; }
+  .hero .art-arch, .hero .design-note, .hero .hero-flower, .hero .handwritten { display: none; }
   .about-art .about-branch { left: -12px; }
   .about-art .about-sticker { right: -5px; }
   .about-copy, .process-grid > li { min-width: 0; }
