@@ -4,8 +4,10 @@ import { useEffect } from 'react'
 import { BrowserRouter, Link, Route, Routes, useLocation, useParams } from 'react-router-dom'
 import { ProjectCase } from './components/ProjectCase'
 import { projects } from './data/projects'
+import { useReveal } from './hooks/useReveal'
 
 function Home() {
+  useReveal()
   return <><a className="skip-link" href="#conteudo">Pular para o conteúdo</a><Header /><main id="conteudo"><Hero /><Projects /><Process /><About /><Contact /></main><Footer /></>
 }
 
